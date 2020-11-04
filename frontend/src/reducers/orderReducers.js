@@ -6,8 +6,8 @@ import {
   ORDER_DETAILS_SUCCESS,
   ORDER_DETAILS_FAIL,
   ORDER_PAY_REQUEST,
-  ORDER_PAY_SUCCESS,
   ORDER_PAY_FAIL,
+  ORDER_PAY_SUCCESS,
   ORDER_PAY_RESET,
 } from '../constants/orderConstants'
 
@@ -40,6 +40,7 @@ export const orderDetailsReducer = (
   switch (action.type) {
     case ORDER_DETAILS_REQUEST:
       return {
+        ...state,
         loading: true,
       }
     case ORDER_DETAILS_SUCCESS:
