@@ -47,7 +47,7 @@ const OrderScreen = ({ match, history }) => {
   }
 
   useEffect(() => {
-    if (userInfo) {
+    if (!userInfo) {
       history.push('/login')
     }
 
